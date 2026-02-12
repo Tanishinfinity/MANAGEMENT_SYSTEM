@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
 
@@ -39,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // FINAL CHECK
     if (isValid) {
       console.log("Form is valid ✅");
-      //   console.log("Email:", email);
-      //   console.log("Password:", password);
+        console.log("Email:", email);
+        console.log("Password:", password);
 
       const loginData = {
         email: email,
@@ -57,9 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         // setting user info in local storage so that we can use it in future
         localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
         window.location.href = "dashboard.html";
       }, 1500);
     }
   });
-});
-<form id="loginForm" action="dashboard" method="post"></form>
+}
+);

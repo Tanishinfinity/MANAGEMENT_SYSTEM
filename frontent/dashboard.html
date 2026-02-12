@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <h1 id="email"></h1>
+    <h3 id="password"></h3>
+    <p>You have logged in successfully.</p>
+
+</body>
+
+<script>
+     const email = localStorage.getItem("userEmail");
+     const part = email.split('@');
+     const userName = part[0];
+    document.getElementById("email").textContent =
+        "Welcome to Dashboard: " + userName;
+    const password = localStorage.getItem("userPassword");
+    document.getElementById("password").textContent = "Your password is: " + password;
+</script>
+</html>
+
